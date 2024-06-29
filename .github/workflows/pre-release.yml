@@ -25,9 +25,6 @@ jobs:
             ./obsidian.css
             ./publish.css
 
-      - name: Minify CSS
-        uses: nizarmah/auto-minify@v3.0.0
-
       - name: Create prerelease
         id: create_prerelease
         uses: marvinpinto/action-automatic-releases@latest
