@@ -1,11 +1,10 @@
-name: "Build Latest"
+name: 'Build Latest'
 on:
   push:
     branches:
       - main
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
 
 jobs:
   build:
@@ -19,7 +18,7 @@ jobs:
         uses: gha-utilities/sass-build@v0.4.8
         with:
           source: |
-            src/theme.css
+            src/theme.scss
             src/publish.scss
           destination: |
             ./theme.css
