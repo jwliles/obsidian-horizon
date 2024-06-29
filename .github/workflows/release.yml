@@ -15,14 +15,14 @@ jobs:
       - name: Checkout source Git branch
         uses: actions/checkout@v2
 
-      - name: Compile obsidian.css and publish.css
+      - name: Compile theme.css and publish.css
         uses: gha-utilities/sass-build@v0.4.8
         with:
           source: |
-            src/obsidian.scss
+            src/theme.css
             src/publish.scss
           destination: |
-            ./obsidian.css
+            ./theme.css
             ./publish.css
 
       - name: minisauras
@@ -40,5 +40,5 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           prerelease: false
           files: |
-            obsidian.css
+            theme.css
             publish.css
